@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Experiment3">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+    <RadioGroup
+        android:id="@+id/radioGroupType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAmount"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radioButtonExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense"/>
+        <RadioButton
+            android:id="@+id/radioButtonIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Income"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_below="@id/radioGroupType"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="onAddButtonClick"/>
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAdd"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"/>
+</RelativeLayout>
