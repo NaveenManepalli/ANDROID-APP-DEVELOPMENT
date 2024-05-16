@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Experiment4">
+    <EditText
+        android:id="@+id/editTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter value"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonConvertKmToMiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert Km to Miles"
+        android:layout_below="@id/editTextInput"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="convertKmToMiles"/>
+    <Button
+        android:id="@+id/buttonConvertKgToPounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert Kg to Pounds"
+        android:layout_below="@id/buttonConvertKmToMiles"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="convertKgToPounds"/>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonConvertKgToPounds"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"/>
+</RelativeLayout>
